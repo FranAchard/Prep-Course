@@ -1,23 +1,26 @@
-// En estas primeras 6 preguntas, reemplaza `null` por la respuesta
+ // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
 const nuevaString = hola;
+var miNombre= 'Francisco Achard';
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = null;
+var miEdad= 20;
 
 // Crea una variable booleana:
 const nuevoBool = null;
+var soyMayor= true
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - null === 5;
-
+Math(10 - null);//10
 // Resuelve el siguiente problema matemático:
 const nuevaMultiplicacion = 10 * null === 40 ;
-
+Math(10 * null);
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === null;
-
+Math(21 % 5); // 1
 
 // En los próximos 22 problemas, deberás completar la función.
 // Todo tu código irá dentro de las llaves de la función.
@@ -28,94 +31,172 @@ const nuevoModulo = 21 % 5 === null;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  
-}
+ var saludo= 'Hola Como estas?';
+  return saludo;
+} 
+devolverString()
+'Hola Como estas?';
+
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  
+  var cuenta= x + y;
+  return cuenta;
 }
+suma(10, 5)
+15;
+
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  
+  var cuentaRestar = x - y;
+return cuentaRestar
 }
+resta (10, 5)
+5;
+
 
 function multiplica(x, y) {
+if (x == y) 
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  
+  var multiplicar = x * y;
+  return multiplicar
 }
+multiplica(2, 2)
+4;
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  
+  var dividir= x / y;
+return dividir
 }
+divide(8, 8)
+1;
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+    {return true}
+  return false
 }
+sonIguales(1, 10)
+false;
+sonIguales(1, 1)
+true;
+
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (str1.length === str2.length) 
+    {return true}
+  return false
 }
+tienenMismaLongitud('hola', 'hola' )
+true;
+tienenMismaLongitud('hola', 'hol' )
+false;
+
+
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (num <90 ) {
+    return true
+  }
+  return false
 }
+menosQueNoventa(10)
+true;
+menosQueNoventa(100)
+false;
+
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (num >50) {
+    return true
+  }
+  return false
 }
+mayorQueCincuenta(100)
+true;
+mayorQueCincuenta(10)
+false;
+
+
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  
+var resto= x % y;
+return resto  
 }
+obtenerResto(25 , 5)
+0;
 
-function esPar(num) {
+function  esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  var division=num % 2;
+  if (division == 0) {
+    return true
+  }
+  return false
 }
+esPar(4)
+true;
+esPar(3)
+false;
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  var division=num % 2;
+  if (division == 1) {
+    return true
+  }
+  return false
 }
+esImpar(10)
+false;
+esImpar(5)
+true;
 
-function elevarAlCuadrado(num) {
-  // Devuelve el valor de "num" elevado al cuadrado
-  // ojo: No es raiz cuadrada!
-  // Tu código:
-  
-}
+
+  function elevarAlCuadrado(num) {
+    // Devuelve el valor de "num" elevado al cuadrado
+    // ojo: No es raiz cuadrada!
+    // Tu código:
+    var cuenta =Math.pow(num , 2)
+    return cuenta
+  }
+elevarAlCuadrado(2)
+4;
+
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+ var cuenta= Math.pow (num , 3)
+ return cuenta
 }
+elevarAlCubo(3)
+27;
+
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
@@ -247,3 +328,4 @@ module.exports = {
   deEuroAdolar,
   esVocal,
 };
+
