@@ -14,10 +14,10 @@ var soyMayor= true
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - null === 5;
-Math(10 - null);//10
+Math(10 - 5);//5
 // Resuelve el siguiente problema matemático:
 const nuevaMultiplicacion = 10 * null === 40 ;
-Math(10 * null);
+Math(10 * 4);//40
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === null;
 Math(21 % 5); // 1
@@ -201,83 +201,128 @@ elevarAlCubo(3)
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
+   var cuenta= Math.pow (num , exponent)
+ return cuenta
+
 }
+elevar(2, 5)
+32;
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  var redondeo = Math.round (num);
+  return redondeo
 }
+redondearNumero(5.2)
+5;
+redondearNumero(5.7)
+6;
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  var haciaArriba = Math.ceil (num);
+  return haciaArriba
 }
+redondearHaciaArriba(7.1)
+8;
 
-function numeroRandom() {
+function numeroRandom(num) {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  var numero= Math.random(num);
+  return numero
 }
+numeroRandom(5)
+0.5432824528733315;
+
 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
+  if (numero >= 0) {
+    return 'Es positivo'
+  }
+  return 'Es negativo'
 }
+esPositivo(-10)
+'Es negativo';
+esPositivo(10)
+'Es positivo';
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  var agrega = str + '!'
+  return agrega
 }
+agregarSimboloExclamacion('Buenaaaas')
+'Buenaaaas!';
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+  var junte = nombre + ' ' + apellido
+  return junte
 }
+combinarNombres('Francisco' , 'Achard' )
+'Francisco Achard'
+
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
+  var saludo= "Hola "+ nombre + "!";
+  return saludo
 }
+obtenerSaludo("Francisco")
+'Hola Francisco!';
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  
+  var rectangulo = alto * ancho ;
+  return rectangulo
 }
+obtenerAreaRectangulo (15, 30)
+450;
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  var perimetro = lado * 4;
+  return perimetro
 }
-
+retornarPerimetro(20)
+80;
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+var area= base * altura;  
+var lados= area / 2;
+return lados 
 }
-
+areaDelTriangulo(10, 15)
+75;
 
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  var valor= euro * 1.20;
+return valor
 }
-
+deEuroAdolar(50)
+60;
 
 function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
@@ -286,8 +331,15 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
+if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o'  || letra === 'u') {
+  return "Dato incorrecto"
 }
-
+return "Dato incorrecto"
+}
+esVocal("a")
+'Dato incorrecto';
+esVocal('SPLÑMZNV')
+'Dato incorrecto';
 
 
 // No modificar nada debajo de esta línea
@@ -328,4 +380,3 @@ module.exports = {
   deEuroAdolar,
   esVocal,
 };
-
